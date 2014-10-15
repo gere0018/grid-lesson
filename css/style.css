@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+/* the clearfix syntax from the web */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+
+/*Layout*/
+body{
+    outline: 1px solid red;
+}
+.wrapper{
+    max-width: 960px;
+    margin: 0, auto;
+   
+}
+header,footer{
+    background: red;
+    text-align: center;
+}
+
+
+/*Grid styles*/
+.col-container{
+    
+    width:100%;
+    
+}
+
+/*col-2 styles*/
+
+.col-2{
+    margin:4rem, 0;
+    background: yellow;
+}
+
+
+@media all and (min-width: 600px){
+    .col-2{
+        width: 47%;
+        float:left;
+        padding: 2rem;
+        margin-left: 6%;
+    }
+    .col-2:first-child{
+        margin-left: 0;
+    }
+}
+
+/*col-3 styles*/
+.col-3{
+    background: orange;
+    padding: 1rem;
+    margin: 4rem 0;
+}
+
+@media screen and (min-width:600px){
+/* --29.33 + 29.33 +29.33*/
+    .col-3{
+        width: 29.33%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+    .col-3:first-child{
+        margin-left: 0%;
+    }
+}
+
+/*col-4 styles*/
+.col-4{
+    background: green;
+    padding: 1rem;
+    margin: 4rem 0;
+}
+@media screen and (min-width:600px){
+/*margin:6+6+6=18% remaining space = 82  82/4= 20.5%*/
+    .col-4{
+        width: 20.5%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+    .col-4:first-child{
+        margin-left: 0%;
+    }
+}
